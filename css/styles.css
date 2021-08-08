@@ -1,0 +1,215 @@
+/* Global Style  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+/* typography  */
+.gray-blue {
+  color: #b9b6d3;
+}
+
+/* browser reset  */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* set root rem to 10px to make rem calcs easier  */
+html {
+  font-size: 16px;
+}
+
+/* 1.2rem is 12px based on 1 rem is 10px  */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+/* buttons  */
+.btn {
+  display: inline-block;
+  background: #6055a5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  -webkit-transform: scaleY(0.98);
+          transform: scaleY(0.98);
+}
+
+/* inputs */
+input {
+  color: #3e3c49;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: .5rem 1rem;
+  width: 100%;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  border: 1px solid #b9b6d3;
+}
+
+input:focus, input:active {
+  border: 1px solid #6055a5;
+  outline: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff7a7a;
+  background-image: url(../images/bg-intro-mobile.png);
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+}
+
+.wrapper .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper .main-content {
+    width: 85%;
+  }
+}
+
+.wrapper .main-content .flex-child {
+  width: 90%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper .main-content .flex-child {
+    width: 48%;
+  }
+}
+
+.wrapper .main-content .flex-child.text-content {
+  color: #fff;
+}
+
+.wrapper .main-content .flex-child.form-content .btn {
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .main-content .flex-child.form-content .btn:active {
+  -webkit-box-shadow: 0px 5px 2px 0px #594e9a;
+          box-shadow: 0px 5px 2px 0px #594e9a;
+}
+
+.wrapper .main-content .flex-child.form-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block {
+  position: relative;
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block input.error {
+  border: 1px solid #ff7a7a;
+  margin-bottom: .25rem;
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block input.error::-webkit-input-placeholder {
+  color: #ff7a7a;
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block input.error:-ms-input-placeholder {
+  color: #ff7a7a;
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block input.error::-ms-input-placeholder {
+  color: #ff7a7a;
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block input.error::placeholder {
+  color: #ff7a7a;
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block img.icon-error {
+  display: none;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper .main-content .flex-child.form-content form .form-input-error-block .error-msg {
+  display: none;
+  text-align: right;
+  font-size: .7rem;
+  color: #ff7a7a;
+  margin-bottom: 1rem;
+}
+
+.wrapper .main-content .flex-child.form-content form .btn-submit {
+  background-color: #38cc8c;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(47, 172, 118, 0.8);
+          box-shadow: 0px 5px 0px 0px rgba(47, 172, 118, 0.8);
+}
+
+.wrapper .main-content .flex-child.form-content form .btn-submit:active {
+  -webkit-box-shadow: 0px 5px 0px 0px #2fac76;
+          box-shadow: 0px 5px 0px 0px #2fac76;
+}
+
+.wrapper .main-content .flex-child.form-content form small {
+  color: #b9b6d3;
+  font-size: .7rem;
+  text-align: center;
+}
+
+.wrapper .main-content .flex-child.form-content form small a {
+  color: #ff7a7a;
+  font-weight: 700;
+  text-decoration: none;
+}
+/*# sourceMappingURL=styles.css.map */

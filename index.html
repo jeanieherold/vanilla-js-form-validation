@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <title>TGS | Form Validation</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="main-content">
+      <div class="text-content flex-child">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.</p>
+      </div>
+      <div class="form-content flex-child">
+        <button class="btn">Try it free 7 days <span class="gray-blue">then $20/mo. thereafter</span></button>
+        <form id="sign-up-form" action="">
+          <span class="form-input-error-block">
+            <input id="fname" name="fname" type="text" placeholder="First Name">
+            <img class="icon-error" src="images/icon-error.svg" alt="">
+            <p class="error-msg fname-err">First Name cannot be empty</p>
+          </span>
+
+          <span class="form-input-error-block">
+            <input id="lname" name="lname" type="text" placeholder="Last Name">
+            <img class="icon-error" src="images/icon-error.svg" alt="">
+            <p class="error-msg lname-err">Last Name cannot be empty</p>
+          </span>
+
+          <span class="form-input-error-block">
+            <input id="email" class="email" name="email" type="text" placeholder="Email Address">
+            <img class="icon-error" src="images/icon-error.svg" alt="">
+            <div class="error-msg email-err">Please enter a valid email address</div>
+          </span>
+
+          <span class="form-input-error-block">
+            <input id="password" name="password" type="text" placeholder="Password">
+            <img class="icon-error" src="images/icon-error.svg" alt="">
+            <div class="error-msg password-err">Password cannot be empty</div>
+          </span>
+
+          <button class="btn btn-submit" type="submit">Claim your free trial</button>
+          <small>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
