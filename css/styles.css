@@ -73,14 +73,14 @@ input:focus, input:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  height: 100vh;
   background-color: #ff7a7a;
   background-image: url(../images/bg-intro-mobile.png);
 }
 
 @media only screen and (min-width: 768px) {
   .wrapper {
+    width: 100vw;
+    height: 100vh;
     background-image: url(../images/bg-intro-desktop.png);
   }
 }
@@ -121,6 +121,13 @@ input:focus, input:active {
 
 .wrapper .main-content .flex-child.text-content {
   color: #fff;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper .main-content .flex-child.text-content {
+    text-align: left;
+  }
 }
 
 .wrapper .main-content .flex-child.form-content .btn {
@@ -147,6 +154,7 @@ input:focus, input:active {
           justify-content: center;
   background-color: #fff;
   padding: 2rem;
+  margin-bottom: 2rem;
   border-radius: 10px;
   -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);

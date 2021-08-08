@@ -79,12 +79,12 @@ input {
 .wrapper {
     display: flex;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
     background-color: $prim-red;
     background-image: url(../images/bg-intro-mobile.png);
 
     @media only screen and (min-width: 768px) {
+        width: 100vw;
+        height: 100vh;
         background-image: url(../images/bg-intro-desktop.png);
     }
 
@@ -112,6 +112,12 @@ input {
             // text on left 
             &.text-content {
                 color: #fff;
+                text-align: center;
+
+                @media only screen and (min-width: 768px) {
+                    text-align: left;
+                }
+
             }
 
             // button above the form 
@@ -131,6 +137,7 @@ input {
                 justify-content: center;
                 background-color: #fff;
                 padding: 2rem;
+                margin-bottom: 2rem;
                 border-radius: 10px;
                 box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
 
