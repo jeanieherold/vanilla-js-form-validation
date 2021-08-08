@@ -22,6 +22,14 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
+  background-color: #ff7a7a;
+  background-image: url(../images/bg-intro-mobile.png);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
 }
 
 /* buttons  */
@@ -70,18 +78,16 @@ input:focus, input:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ff7a7a;
-  background-image: url(../images/bg-intro-mobile.png);
+  padding: 2rem 0;
+  width: 100vw;
 }
 
 @media only screen and (min-width: 768px) {
   .wrapper {
-    width: 100vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100vh;
-    background-image: url(../images/bg-intro-desktop.png);
   }
 }
 
@@ -94,21 +100,21 @@ input:focus, input:active {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
   .wrapper .main-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 85%;
   }
 }
 
 .wrapper .main-content .flex-child {
-  width: 90%;
+  width: 95%;
   padding: 1rem;
   margin: 0 auto;
 }
@@ -122,18 +128,37 @@ input:focus, input:active {
 .wrapper .main-content .flex-child.text-content {
   color: #fff;
   text-align: center;
+  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 768px) {
   .wrapper .main-content .flex-child.text-content {
     text-align: left;
+    margin-top: 0;
   }
+}
+
+.wrapper .main-content .flex-child.text-content h1 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.wrapper .main-content .flex-child.text-content p {
+  margin-bottom: 1rem;
 }
 
 .wrapper .main-content .flex-child.form-content .btn {
   width: 100%;
-  -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2);
+  padding: .5rem 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper .main-content .flex-child.form-content .btn {
+    padding: .75rem 2rem;
+  }
 }
 
 .wrapper .main-content .flex-child.form-content .btn:active {
@@ -153,11 +178,17 @@ input:focus, input:active {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   margin-bottom: 2rem;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper .main-content .flex-child.form-content form {
+    padding: 2rem;
+  }
 }
 
 .wrapper .main-content .flex-child.form-content form .form-input-error-block {
@@ -207,6 +238,7 @@ input:focus, input:active {
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 0px 0px rgba(47, 172, 118, 0.8);
           box-shadow: 0px 5px 0px 0px rgba(47, 172, 118, 0.8);
+  padding: .5rem 2rem;
 }
 
 .wrapper .main-content .flex-child.form-content form .btn-submit:active {

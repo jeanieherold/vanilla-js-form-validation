@@ -31,6 +31,12 @@ html {
 body {
     font-family: $poppins;
     font-size: 1rem;
+    background-color: $prim-red;
+    background-image: url(../images/bg-intro-mobile.png);
+
+    @media only screen and (min-width: 768px) {
+        background-image: url(../images/bg-intro-desktop.png);
+    }
 }
 
 /* buttons  */
@@ -78,30 +84,30 @@ input {
 
 .wrapper {
     display: flex;
-    align-items: center;
-    background-color: $prim-red;
-    background-image: url(../images/bg-intro-mobile.png);
+    padding: 2rem 0;
+    width: 100vw;
+    
 
     @media only screen and (min-width: 768px) {
-        width: 100vw;
+        align-items: center;
         height: 100vh;
-        background-image: url(../images/bg-intro-desktop.png);
     }
 
     .main-content {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        align-items: center;
-        width: 90%;
+        // align-items: center;
+        width: 100%;
         margin: 0 auto;
 
         @media only screen and (min-width: 768px) {
+            align-items: center;
             width: 85%;
         }
 
         .flex-child {
-            width: 90%;
+            width: 95%;
             padding: 1rem;
             margin: 0 auto;
 
@@ -113,9 +119,21 @@ input {
             &.text-content {
                 color: #fff;
                 text-align: center;
+                margin-top: 2rem;
 
                 @media only screen and (min-width: 768px) {
                     text-align: left;
+                    margin-top: 0;
+                }
+
+                h1 {
+                    font-size: 1.6rem;
+                    line-height: 1.2;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    margin-bottom: 1rem;
                 }
 
             }
@@ -123,7 +141,12 @@ input {
             // button above the form 
             &.form-content .btn {
                 width: 100%;
-                box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2);
+                padding: .5rem 3rem;
+
+                @media only screen and (min-width: 768px) {
+                    padding: .75rem 2rem;
+                }
 
                 &:active {
                     box-shadow: 0px 5px 2px 0px #594e9a;
@@ -136,10 +159,14 @@ input {
                 flex-direction: column;
                 justify-content: center;
                 background-color: #fff;
-                padding: 2rem;
+                padding: 1.5rem;
                 margin-bottom: 2rem;
                 border-radius: 10px;
-                box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2);
+
+                @media only screen and (min-width: 768px) {
+                    padding: 2rem;
+                }
 
                 .form-input-error-block {
                     position: relative;
@@ -176,6 +203,7 @@ input {
                     background-color: $prim-green;
                     border-radius: 5px;
                     box-shadow: 0px 5px 0px 0px rgba(47, 172, 118, .8);
+                    padding: .5rem 2rem;
 
                     &:active {
                         box-shadow: 0px 5px 0px 0px rgb(47, 172, 118);
