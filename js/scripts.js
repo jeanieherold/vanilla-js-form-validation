@@ -58,21 +58,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 }); //end DOM ready
-
-
-function validateForm() {
-    inputs.forEach((input) => {
-        //check email pattern
-        if(input.classList.contains('email') && !regexForEmail.test(email.value)) {
-            input.classList.add('error');
-            input.nextElementSibling.style.display = "block";  
-        } else if (input.value == "") {
-            //check for empty fields
-            input.classList.remove('error');
-            input.nextElementSibling.style.display = "none";
-        } else {
-            input.classList.remove('error');
-            input.nextElementSibling.style.display = "none";
-        }
-    });
-}
