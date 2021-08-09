@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const lname = document.querySelector('#lname');
     const email = document.querySelector('#email');
     const password = document.querySelector('#password');
-    const regexForEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const regexForEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
