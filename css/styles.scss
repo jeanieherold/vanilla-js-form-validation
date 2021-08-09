@@ -22,12 +22,12 @@ sans-serif;
     padding: 0;
 }
 
-/* set root rem to 10px to make rem calcs easier  */
+/* set root rem to 16px so body has 1rem font size  */
 html {
     font-size: 16px;
 }
 
-/* 1.2rem is 12px based on 1 rem is 10px  */
+/* 1rem is 16px  */
 body {
     font-family: $poppins;
     font-size: 1rem;
@@ -104,6 +104,7 @@ input {
         @media only screen and (min-width: 768px) {
             align-items: center;
             width: 85%;
+            max-width: 1000px;
         }
 
         .flex-child {

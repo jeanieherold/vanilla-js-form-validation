@@ -110,6 +110,7 @@ input:focus, input:active {
         -ms-flex-align: center;
             align-items: center;
     width: 85%;
+    max-width: 1000px;
   }
 }
 
