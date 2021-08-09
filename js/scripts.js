@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // code...
     const form = document.querySelector('#sign-up-form');
-    const inputs = document.querySelectorAll('input');
-    console.log(inputs);
     const fname = document.querySelector('#fname');
     const lname = document.querySelector('#lname');
     const email = document.querySelector('#email');
@@ -11,11 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        //ok to submit boolean
+        let submitform = true;
         //validate fname input field
         if(fname.value == "") {
             fname.classList.add('error');
             fname.nextElementSibling.style.display = "block";
             document.querySelector('.fname-err').style.display = "block";
+            submitform = false;
         } else {
             fname.classList.remove('error');
             fname.nextElementSibling.style.display = "none";
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             lname.classList.add('error');
             lname.nextElementSibling.style.display = "block";
             document.querySelector('.lname-err').style.display = "block";
+            submitform = false;
         } else {
             lname.classList.remove('error');
             lname.nextElementSibling.style.display = "none";
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             email.style.color = "#ff7a7a";
             email.nextElementSibling.style.display = "block";
             document.querySelector('.email-err').style.display = "block";
+            submitform = false;
         } else {
             email.classList.remove('error');
             email.style.color = "#3e3c49";
@@ -48,10 +51,15 @@ document.addEventListener("DOMContentLoaded", function() {
             password.classList.add('error');
             password.nextElementSibling.style.display = "block";
             document.querySelector('.password-err').style.display = "block";
+            submitform = false;
         } else {
             password.classList.remove('error');
             password.nextElementSibling.style.display = "none";
             document.querySelector('.password-err').style.display = "none";
+        }
+
+        if(submitform) {
+            e.target.submit();
         }
 
 
